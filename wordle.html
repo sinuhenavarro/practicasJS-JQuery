@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wordle</h1>
+
+        <section id="game">
+            <section id="word0">
+                <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
+                <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
+                <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
+                <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
+                <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
+            <button  name="ok" id="ok0" type="button" class="btn btn-success""><i class="fa fa-check"></i></button>
+            </section>
+        </section>
+
+    </div>
+    <script>
+
+        //Última palabra añadida. Se usa para recorrer la lista de palabras
+        var n = 0;
+
+        $(document).ready(function(){
+                       
+            //Evita tener que pulsar tabulador o hacer click para cmabiar de letra
+            $('.word').keyup( function(){
+                $(this).next().focus();
+            });
+
+                    //Inserta la nueva palabra con las pistas
+            $('[name="ok"]').click( function (){
+                n++;
+                var word = '<section class="word' + n + ' ">';
+                for(let i=0;i<5;i++){
+                    word = word + '<input class="word" name="word" type="text" minlength="1" maxlength="1" size="1"> ';
+                }
+                
+                word = word + '<button  name="ok"  id="ok' + n + '"" type="button" class="btn btn-success"><i class="fa fa-check"></i></button></section>';
+                console.log('Pulsando  ' + (n-1));
+                $('#word' + (n-1)).prepend(word);
+               // $('#word' + (n)).prop('disabled', true);
+                
+            });
+        });
+
+
+
+    </script>
+</body>
+</html>
