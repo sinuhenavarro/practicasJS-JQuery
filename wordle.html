@@ -17,14 +17,14 @@
     <div class="container">
         <h1>Wordle</h1>
 
-        <section id="game">
+        <main id="game">
             <section id="word0">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
-            <button  name="ok" id="ok0" type="button" class="btn btn-success""><i class="fa fa-check"></i></button>
+            <button  name="ok" id="ok0" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
             </section>
             <section id="word1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
@@ -32,7 +32,7 @@
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
-            <button  name="ok" id="ok1" type="button" class="btn btn-success""><i class="fa fa-check"></i></button>
+                <button  name="ok" id="ok1" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
             </section>
             <section id="word2">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
@@ -40,7 +40,7 @@
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
-            <button  name="ok" id="ok2" type="button" class="btn btn-success""><i class="fa fa-check"></i></button>
+                <button  name="ok" id="ok2" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
             </section>
             <section id="word3">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
@@ -48,7 +48,7 @@
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
-            <button  name="ok" id="ok3" type="button" class="btn btn-success""><i class="fa fa-check"></i></button>
+                <button  name="ok" id="ok3" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
             </section>
             <section id="word4">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
@@ -56,7 +56,7 @@
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
-            <button  name="ok" id="ok4" type="button" class="btn btn-success""><i class="fa fa-check"></i></button>
+                <button  name="ok" id="ok4" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
             </section>
             <section id="word5">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
@@ -64,11 +64,14 @@
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
-            <button  name="ok" id="ok5" type="button" class="btn btn-success""><i class="fa fa-check"></i></button>
+                <button  name="ok" id="ok5" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
             </section>
-        </section>
+        </main>
 
     </div>
+    <footer class="container-fluid p-3 text-center">
+        <p>App desarrollada por </em>Sinuhé Navarro Martín</em> para el módulo de </em>Libre configuración</em> del ciclo de Grado Medio de <em>Sistemas microinformáticos y redes</em></p>
+    </footer>
     <script>
 /***********************************************************************
  * AQUÍ ESTÁN LAS LLAMADAS A LAS FUNCIONES INVOCADAS EN CADA EVENTO
@@ -76,14 +79,19 @@
         $(document).ready(function(){
        
             ocultarCasillas();
-
+            
             //Evita tener que pulsar tabulador o hacer click para cmabiar de letra
             $('.word').keyup( function(){
                 $(this).next().focus();
+
             });
 
-            //Muestra la nueva palabra vacía al pulsar en el botón OK
+            // Click en el botón OK
             $('[name="ok"]').click( function (){
+                // Colorea las letras correctas
+                letrasCorrectas();
+               
+                //Muestra la nueva palabra vacía al pulsar en el botón OK
                 mostrarSiguientesCasillas($(this));
             });
 
