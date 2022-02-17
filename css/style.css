@@ -19,9 +19,11 @@ input[type=text]{
     vertical-align: middle;
     text-align: center;
 }
-
+main{
+    min-height: 10rem;
+}
 footer{
-    position: absolute;
+    margin-top: 1rem;
     bottom: 0%;
     font-size: 0.7rem;
     background-color: blueviolet;

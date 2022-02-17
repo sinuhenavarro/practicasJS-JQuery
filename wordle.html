@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wordle IES Medina Azahara</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/wordle.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="container">
+    <div class="container text-center">
         <h1>Wordle</h1>
 
         <main id="game">
@@ -24,75 +29,89 @@
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
-            <button  name="ok" id="ok0" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
+                <button name="ok" id="ok0" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
             </section>
-            <section id="word1">
+            <section id="word1" style="display: none;">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
-                <button  name="ok" id="ok1" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
+                <button name="ok" id="ok1" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
             </section>
-            <section id="word2">
+            <section id="word2" style="display: none;">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
-                <button  name="ok" id="ok2" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
+                <button name="ok" id="ok2" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
             </section>
-            <section id="word3">
+            <section id="word3" style="display: none;">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
-                <button  name="ok" id="ok3" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
+                <button name="ok" id="ok3" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
             </section>
-            <section id="word4">
+            <section id="word4" style="display: none;">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
-                <button  name="ok" id="ok4" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
+                <button name="ok" id="ok4" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
             </section>
-            <section id="word5">
+            <section id="word5" style="display: none;">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
                 <input class="word" name="word" type="text" minlength="1" maxlength="1" size="1">
-                <button  name="ok" id="ok5" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
+                <button name="ok" id="ok5" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>
             </section>
         </main>
-
     </div>
+    <section class="mt-3" id="mensaje"></section>
+
     <footer class="container-fluid p-3 text-center">
-        <p>App desarrollada por </em>Sinuhé Navarro Martín</em> para el módulo de </em>Libre configuración</em> del ciclo de Grado Medio de <em>Sistemas microinformáticos y redes</em></p>
+        <p>App desarrollada por </em>Sinuhé Navarro Martín</em> para el módulo de </em>Libre configuración</em> del
+            ciclo de Grado Medio de <em>Sistemas microinformáticos y redes</em></p>
     </footer>
     <script>
-/***********************************************************************
- * AQUÍ ESTÁN LAS LLAMADAS A LAS FUNCIONES INVOCADAS EN CADA EVENTO
- * ****************************************************************** */
-        $(document).ready(function(){
-       
-            ocultarCasillas();
-            
-            //Evita tener que pulsar tabulador o hacer click para cmabiar de letra
-            $('.word').keyup( function(){
-                $(this).next().focus();
+        /***********************************************************************
+         * AQUÍ ESTÁN LAS LLAMADAS A LAS FUNCIONES INVOCADAS EN CADA EVENTO
+         * ****************************************************************** */
 
+        $(document).ready(function () {
+
+            palabraAleatoria();
+
+            //Evita tener que pulsar tabulador o hacer click para cambiar de letra
+            $('.word').keyup(function () {
+                $(this).next().focus();
             });
 
             // Click en el botón OK
-            $('[name="ok"]').click( function (){
-                // Colorea las letras correctas
-                letrasCorrectas();
-               
-                //Muestra la nueva palabra vacía al pulsar en el botón OK
-                mostrarSiguientesCasillas($(this));
+            $('[name="ok"]').click(function () {
+                // Colorea las letras correctas. Además verifica si ya ha ganado
+                if (comprobarPalabra()) {
+                    let mensajeGanador = '<h2 class="alert alert-success text-center" role="alert">Enhorabuena, has ganado';
+                    mensajeGanador += '<br><button class="btn-dark btn-sm" onclick="window.location.reload();">Volver a jugar</button></h2>';
+                    $('#mensaje').append(mensajeGanador);
+                }
+                else if (intentos < 5) {
+                    //Muestra la nueva palabra vacía al pulsar en el botón OK
+                    mostrarSiguientesCasillas($(this));
+                } else {
+                    //Deshabilita el último input y el botón pulsado
+                    $('#word' + intentos).children().prop('disabled', true);
+                    // Muestra un mensaje y un botón para volver a jugar
+                    let mensajePerdedor = '<h2 class="alert alert-warning text-center" role="alert">Lo siento, no tienes más intentos';
+                    mensajePerdedor += '<br><button class="btn-dark btn-sm" onclick="window.location.reload();">Volver a jugar</button></h2>';
+                    $('#mensaje').append(mensajePerdedor);
+                }
             });
 
         });
@@ -100,4 +119,5 @@
 
     </script>
 </body>
+
 </html>
