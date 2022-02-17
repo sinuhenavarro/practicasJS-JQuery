@@ -95,23 +95,14 @@
 
             // Click en el botón OK
             $('[name="ok"]').click(function () {
-                // Colorea las letras correctas. Además verifica si ya ha ganado
-                if (comprobarPalabra()) {
-                    let mensajeGanador = '<h2 class="alert alert-success text-center" role="alert">Enhorabuena, has ganado';
-                    mensajeGanador += '<br><button class="btn-dark btn-sm" onclick="window.location.reload();">Volver a jugar</button></h2>';
-                    $('#mensaje').append(mensajeGanador);
+                if (haGanado()){
+                    //La función haGanado muestra el mensaje de éxito
                 }
                 else if (intentos < 5) {
                     //Muestra la nueva palabra vacía al pulsar en el botón OK
+                    colorearLetras();
                     mostrarSiguientesCasillas($(this));
-                } else {
-                    //Deshabilita el último input y el botón pulsado
-                    $('#word' + intentos).children().prop('disabled', true);
-                    // Muestra un mensaje y un botón para volver a jugar
-                    let mensajePerdedor = '<h2 class="alert alert-warning text-center" role="alert">Lo siento, no tienes más intentos';
-                    mensajePerdedor += '<br><button class="btn-dark btn-sm" onclick="window.location.reload();">Volver a jugar</button></h2>';
-                    $('#mensaje').append(mensajePerdedor);
-                }
+                } else haPerdido();
             });
 
         });
