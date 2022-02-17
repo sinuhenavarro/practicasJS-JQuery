@@ -89,7 +89,7 @@
             palabraAleatoria();
 
             //Evita tener que pulsar tabulador o hacer click para cambiar de letra
-            $('.word').keyup(function () {
+            $('.word').on('input', function () {
                 $(this).next().focus();
             });
 

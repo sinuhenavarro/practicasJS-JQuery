@@ -23,12 +23,14 @@ function ocultarCasillas() {
 /*************************************************************
 * Muestra la siguiente fila de letras y bloquea la actual
 **************************************************************/
-function mostrarSiguientesCasillas(boton) {
+function mostrarSiguientesCasillas() {
     //Deshabilita los input anteriores y el botón pulsado
     $('#word' + intentos).children().prop('disabled', true);
     intentos++;
     //Muestra la siguiente fila de letras
     $('#word' + intentos).css('display', 'block');
+    //Cambia el foco al primer input de la nueva palabra actual
+    $('#word' + intentos).children().eq(0).focus();
 }
 
 /*************************************************************
